@@ -1,0 +1,124 @@
+.ganres__box {
+position: absolute;
+bottom: 10px;
+width: 94%;
+display: flex;
+justify-content: center;
+}
+.ganres__list {
+    @media screen and (max-width: 1023px) {
+    position: absolute;
+    left: 35%;
+    width: 30%;
+   padding: 5px 15px;
+    background-color: $accent-color;
+    text-align: start;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: scale(0);
+    transform-origin: top left;
+    transition: transform 300ms linear;
+}
+    @media screen and (min-width: 768px) and  (max-width: 1023px){
+     width: 240px;
+   display: flex;
+padding-left: 30px;
+   flex-wrap: wrap;
+   padding-left: 30px;
+}
+    @media screen and (min-width: 1024px) {
+     width: 100%;
+   display: flex;
+   justify-content: space-around;
+   
+}
+.ganres__item{
+     @media screen and (min-width: 768px) and  (max-width: 1023px) {
+    width: 90px;
+}
+}
+// .ganres__item:not(:last-child){
+//      @media screen and (min-width: 768px) and  (max-width: 1023px) {
+//    margin-right: 10px;
+// }
+// }
+.ganres__item:not(:last-child) {
+    @media screen and (max-width: 1023px) {
+    margin-bottom: 5px;
+}
+}
+
+}
+.ganres__list.is-open {
+    transform: scale(1);
+    z-index: 10;
+}    
+.ganres__link {
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 1.2;
+    color:aliceblue;
+   @media screen and (min-width: 768px) and  (max-width: 1023px){
+ font-size: 10px;
+}
+cursor: pointer;
+transition: opacity 300ms linear;
+&:hover,
+&:focus {
+    opacity: 1;
+    &::after {
+        transform: scaleX(1);
+    }
+}
+  @media screen and (min-width: 1024px) {
+    &::after {
+    content:"";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color:  $accent-color;
+    transform: scaleX(0);
+    transition: transform 300ms linear;
+}
+   
+}
+
+
+}
+.active{
+     &::after {
+        transform: scaleX(1);
+    }
+}
+.ganres__button {
+position: absolute;
+top: -30px;
+cursor: pointer;
+border: none;
+display: inline-flex;
+align-items: center;
+background-color: transparent;
+color:aliceblue;
+display: block;
+font-size: 16px;
+font-weight: 500;
+display: inline-flex;
+align-items: center;
+@media screen and (max-width:1023px) {
+    &::before {
+       content: "";
+       margin-right: 10px;
+       display: inline-flex;
+       align-items: center;
+       background-size: cover;
+       width: 14px;
+       height: 20px;
+       background-position: center;
+      color:aliceblue;
+       background-image: url(../images/icons-.png);
+    }
+}
+ @media screen and (min-width: 1024px) {
+    display: none;
+}
+}

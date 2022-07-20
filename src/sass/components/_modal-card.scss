@@ -1,0 +1,213 @@
+.current-movie {
+  background-color: white;
+  
+  @media screen and (max-width: 767px) {
+width: 90vw;
+  }
+  padding: 40px 20px 40px 20px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    width: 704px;
+    padding: 40px 36px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 814px;
+    padding: 40px 16px;
+  }
+}
+
+.modal__close-button-cm {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+background-image: url(../images/closest.svg);
+background-repeat: no-repeat;
+background-size:cover;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition:background-color 250ms linear,box-shadow 250ms linear;
+ &:hover,
+ &:focus{
+  background-color:white;
+  box-shadow      : 0px 4px 4px rgba(0, 0, 0, 0.15);
+ }
+}
+
+.current-movie__img {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width:264px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 375px;
+  }
+}
+
+.current-movie__info {
+  @media screen and (min-width: 768px) {
+  margin-left: 68px;
+  width: 300px;
+  }
+  @media screen and (min-width: 1024px) {
+  margin-left: 16px;
+   width: 400px;
+  }
+}
+.info__box{
+  display: flex;
+}
+.info__name{
+   width:150px;
+      @media screen and (min-width: 768px) {
+    width:120px;
+  }
+    @media screen and (min-width: 1024px) {
+    width:100px;
+  }
+}
+.info__value{
+   @media screen and (min-width: 768px) {
+    margin-left: 35px;
+    width:200px;
+  }
+  @media screen and (min-width: 1024px) {
+    margin-left: 75px;
+    width:200px;
+  }
+}
+.current-movie__title {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 1.15;
+@media screen and (min-width: 1024px) {
+    font-size: 30px;
+line-height: 1.17;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+  }
+}
+.current-movie__name{
+  color: #8c8c8c;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 1.33;
+}
+.current-movie__name:not(:last-child){
+    margin-bottom: 8px;
+}
+.info__item{
+   color: #000000;
+     font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+  line-height: 1.33; 
+}
+.info__item:not(:last-child){
+  margin-bottom: 8px;
+}
+
+
+.current-movie__vote-data {
+  padding-left: 5px;
+  padding-right: 8px;
+  background-color: #ff6b08;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.current-movie__about-section {
+  margin-top:20px;
+   margin-bottom: 20px;
+}
+.current-movie__about {
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 1.33;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.current-movie__about-data {
+ 
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 1.67;
+}
+.current-movie__btn-container {
+  display: flex;
+  justify-content: center;
+}
+.current-movie_btn-add-to-watched:not(:first-child) {
+  @media screen and (min-width: 1024px) {
+    margin-left: 20px;
+  }
+}
+.btn:not(:first-child){
+    margin-left: 10px;
+      @media screen and (min-width: 768px) {
+    margin-left: 15px;
+  }
+}
+.btn{
+  
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 1.33;
+  border: 1px solid #000000;
+  border-radius: 5px;
+ width: 120px;
+ height: 40px;
+      @media screen and (min-width: 768px) {
+    font-size: 10px;    
+    width: 100px;
+ height: 35px;
+  }
+  cursor: pointer;
+  transition: background-color 250ms linear,color 250ms linear;
+
+  &:hover,
+  &:focus,
+  &:active{
+  background-color: #ff6b01;
+  color: #fff;
+  border-radius: 5px;
+  justify-content: center;
+  }
+
+  &:disabled:hover,
+  &:disabled:focus {
+    background-color: #fff;
+    color: #9d9d9d;
+  }
+}
+
+.basicLightbox{
+  @media screen and (max-width: 767px) {
+    margin-top: 5px;
+    padding-top: 250px;
+   height: 100vh; 
+   overflow-y: auto,
+  }
+}

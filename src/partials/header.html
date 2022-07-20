@@ -1,0 +1,101 @@
+<header class="js-header header" id="home">
+  <h1 hidden>Filmoteka</h1>
+  <section
+    class="js-header-container header__container header__home-padding header__home-bg container"
+  >
+    <!-- Dark theme component -->
+    <include src="./partials/dark-theme.html"></include>
+    <!-- Nav Bar -->
+    <nav class="nav nav__home-margin">
+      <a class="js-logo nav__logo" href="">
+        <img
+          class="nav__logo-img"
+          src="./images/film.svg"
+          alt="Logo"
+          width="24"
+          height="24"
+          aria-label="Logo"
+        />
+        <span class="nav__logo-text">Filmoteka</span>
+      </a>
+      <ul class="js-menu nav__list">
+        <li class="nav__item">
+          <a data-link="home" href="" class="nav__link current-page">Home</a>
+        </li>
+        <li class="nav__item nav_my-library is-hidden">
+          <a data-link="library" href="" class="nav__link">My library</a>
+        </li>
+        <li class="nav__item nav__login">
+          <a data-link="login" href="" class="nav__link">Login</a>
+        </li>
+        <li class="nav__item nav__logout">
+          <a data-link="logout" href="" class="nav__link">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Films Search Form -->
+    <form class="js-submit form" id="search-form">
+      <input
+        class="form__input"
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Enter the name of the movie "
+      />
+      <span class="incorrect__input is-hidden"
+        >Search result not successful. Enter the correct movie name</span
+      >
+      <button class="form__button" type="submit">
+        <img
+          src="./images/search.svg"
+          alt="Search films icon"
+          width="12"
+          height="12"
+          aria-label="Search films button"
+        />
+      </button>
+    </form>
+<div class="ganres__box">
+<button class="ganres__button" type="button" data-open-products>Ganres</button>
+   <ul class="ganres__list" data-modal-products>
+        <li class="ganres__item"><a class="ganres__link" data-name="Action">Action</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Adventure">Adventure</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Animation">Animation</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Comedy">Comedy</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Crime">Crime</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Documentary">Documentary</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Drama">Drama</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Family">Family</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Fantasy">Fantasy</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="History">History</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Horror">Horror</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Music">Music</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Mystery">Mystery</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Romance">Romance</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Science Fiction">Science Fiction</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="TV Movie">TV Movie</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Thriller">Thriller</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="War">War</a></li>
+        <li class="ganres__item"><a class="ganres__link" data-name="Western">Western</a></li>
+   </ul>
+</div>
+
+<!-- Header Library Buttons -->
+    <ul class="js-librari-list library is-hidden">
+      <li class="library__item">
+        <button
+          class="js-watched-btn library__item-btn active-btn"
+          type="button"
+        >
+          Watched
+        </button>
+      </li>
+      <li class="library__item">
+        <button class="js-queue-btn library__item-btn" type="button">
+          Queue
+        </button>
+      </li>
+    </ul>
+  </section>
+</header>

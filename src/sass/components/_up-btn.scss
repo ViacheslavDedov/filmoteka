@@ -1,0 +1,21 @@
+.up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  color:$accent-color;
+  border: 3px solid $accent-color;
+  transition: transform $hover-animation;
+  cursor: pointer;
+  &:hover {
+    background-color: $accent-color;
+    color: $white-text-color;
+    transform: scale(1.1);
+
+  }
+}
+
+.js-hidden {
+  display: none;
+}

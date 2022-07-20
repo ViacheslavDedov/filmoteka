@@ -1,0 +1,114 @@
+.films__library__page{
+padding-top:20px;
+padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.gallery {
+  display:flex;
+  flex-wrap: wrap;
+ 
+  @media screen and (min-width: 768px) {
+  margin-top: -32px;  
+  margin-left: -32px;
+  }
+@media screen and (min-width: 1024px) {
+  
+  margin-left: -17px;
+  }
+}
+
+.films__list{
+  width:100%;
+  @media screen and (min-width: 768px) {
+  margin-top: 32px;
+  width:calc((100% - 64px)/2);
+  margin-left: 32px;
+  }
+  
+  @media screen and (min-width: 1024px) {
+  margin-top: 32px;
+  width:calc((100% - 51px)/3);
+  margin-left: 17px;
+  }
+}
+.films__list:not(:last-child){
+margin-bottom:20px;
+}
+.films-id{text-decoration: none;
+    color: inherit;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
+
+}
+.film__photo__card{background-color: #fff;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 250ms linear;
+    cursor: pointer;
+
+}
+
+.film__photo__card:hover{
+    transform: scale(1.07);
+}
+
+.film__picture{
+    width: 100%;
+        height: 398px;
+        border-radius: 5px;
+        @media screen and (min-width: 768px) {
+        height: 455px;
+        }
+        @media screen and (min-width: 1024px) {
+        height: 449px;
+        }
+}
+
+.film__info{
+    transform: scale(1);
+    transition: transform .25s linear;
+    padding-top: 10px;
+    @media screen and (min-width: 768px) {
+    padding-top: 8px;
+    }
+}
+.film__title,
+.film__description{
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+.film__title{
+    text-transform: uppercase;
+}
+.film__description{
+    flex-grow: 1;
+    display: flex;
+     color: #ff6b08;
+}
+.film__genres__list{
+    display: flex;
+    margin-right: 5px;
+}
+.film__release__date{
+    padding-left: 5px;
+    padding-right: 8px;
+    border-left: 1.5px solid #ff6b08;
+}
+.js-is-hidden{
+    display: none;
+}
+.film__vote{
+    padding-left: 5px;
+    padding-right: 8px;
+    background-color: #ff6b08;
+    border-radius: 5px;
+    color: #fff;
+}

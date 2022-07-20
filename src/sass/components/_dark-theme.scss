@@ -1,0 +1,140 @@
+$primaryDarkBgColor: rgb(18, 18, 18);
+$secondaryDarkBgColor: #000000;
+$primaryDarkTextColor: #ff6b08;
+$secondaryDarkTextColor: #ffffff;
+
+.theme {
+  box-sizing: border-box;
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  &__user-name {
+    color: $secondaryDarkTextColor;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 1.04;
+    font-weight: 400;
+
+    // margin-top: 6px;
+    margin-right: 20px;
+  }
+
+  &__checkbox {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    width: 50px;
+    height: 26px;
+    padding: 5px;
+    background-color: #ff6b08;
+    transform: scale(0.7);
+  }
+
+  &__fas {
+  }
+
+  &__fa-moon {
+    color: #f1c40f;
+  }
+
+  &__fa-sun {
+    color: #f39c12;
+  }
+
+  &__ball {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 22px;
+    transition: transform 0.2s linear;
+  }
+
+  &__checkbox:checked + &__label &__ball {
+    transform: translateX(24px);
+    // background-color: purple;
+  }
+}
+
+fa-moon {
+  color: #f1c40f;
+}
+
+fa-sun {
+  color: #f39c12;
+}
+
+body.dark {
+  & .header {
+    background-color: $secondaryDarkBgColor;
+  }
+
+  & .theme__user-name {
+    color: $primaryDarkTextColor;
+  }
+
+  & .main {
+    background-color: $primaryDarkBgColor;
+  }
+
+  & footer {
+    background-color: $secondaryDarkBgColor;
+  }
+
+  & .form::after {
+    background-color: $primaryDarkTextColor;
+  }
+
+  & .photo-card {
+    background-color: $primaryDarkBgColor;
+    box-shadow: none;
+  }
+
+  & .nav__logo-text {
+    color: $primaryDarkTextColor;
+  }
+
+  & .form__input {
+    color: $primaryDarkTextColor;
+  }
+
+  & .form__input::placeholder {
+    color: $primaryDarkTextColor;
+  }
+
+  & .nav__link {
+    color: $primaryDarkTextColor;
+  }
+
+  & .movie-title {
+    color: $secondaryDarkTextColor;
+  }
+
+  & .tui-page-btn {
+    color: #f8f8f8;
+  }
+}
+
+.header,
+.main,
+footer {
+  transition: background 0.2s linear;
+}
+
+.up-btn .material-icons {
+  line-height: 1.4;
+}
